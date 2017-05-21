@@ -16,8 +16,16 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 from HMapp import views
+
+
+from HMapp.views import DatosUserListView
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^$', views.inicio, name='inicio'),
+
+    url(r'^$', views.home, name='home'),
+
+    url(r'^inicio/$', views.inicio, name='inicio'),
     url(r'^InfoPersonal/', views.InfPersonal, name='InfPersonal'),
+
+    url(r'^DatosUser/lista$', DatosUserListView.as_view(), name='DatosUser_list'),
 ]

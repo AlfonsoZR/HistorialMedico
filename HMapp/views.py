@@ -4,7 +4,20 @@ from __future__ import unicode_literals
 from django.shortcuts import render
 from .forms import RegConsulta, RegPersonal
 from .models import DatosUser
+
+from django.views.generic.detail import DetailView
+from django.views.generic.list import ListView
+from django.views.generic.edit import CreateView, UpdateView
+
 # Create your views here.
+
+def home(request):
+    #Logico de negocio alias hechizo
+    m = "Mi Historial Medico. :)"
+    contexto= {"mensaje":m}
+    return render(request, 'home.html', contexto)
+
+
 def inicio (request):
     form = RegConsulta(request.POST or None)
     if form.is_valid():
@@ -35,3 +48,22 @@ def InfPersonal (request):
     }
 
     return render(request,"InfPresonal.html", context)
+
+
+
+
+class DatosUserListView(ListView):
+    model = DatosUser
+
+    def get_queryset(self, *args, **kwargs):
+        qs = super(DatosUserListView, self).get_queryset(**kwargs)
+
+        # busca = self.request.GET.get("q")
+        # if busca:
+        #     qset = (
+        #         Q(nombre__icontains=busca) |
+        #         Q(autor__icontains=busca)
+        #     )
+        #     qs = Libro.objects.filter(qset).distinct()
+
+        return qs
