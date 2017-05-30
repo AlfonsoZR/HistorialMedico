@@ -25,7 +25,7 @@ SECRET_KEY = '%_wrs4unu+**xj$t(%fg+6=p0y2*0b^0c#3g%*@-tx#(15ge)7'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [*]
 
 
 # Application definition
