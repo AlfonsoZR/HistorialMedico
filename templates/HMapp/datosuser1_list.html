@@ -1,0 +1,45 @@
+{%extends 'base.html'%}
+{%block content%}
+<!DOCTYPE html>
+
+<div class="table-responsive col-md-6 col-md-offset-3">
+  <ul class="nav nav-pills">
+    <li role="presentation"><a href="/InfoPersonal/">Agregar Paciente</a></li>
+    <li role="presentation"class="active"><a href="/DatosUser/lista">Lista de paciente</a></li>
+  </ul>
+  <h1>Datos Personales Basicos.</h1>
+  <table class="table table-striped">
+<thead>
+  <tr>
+    <th>Nombre</th>
+    <th>Edad</th>
+    <th>Fecha de Nacimiento</th>
+    <th>Tipo de Sangre</th>
+    <th>Email</th>
+  </tr>
+</thead>
+<tbody>
+  <ul>
+    {%for DatosUser1 in object_list%}
+
+    <tr>
+
+      <th><a href="#">{{DatosUser1.nombre}}</a></th>
+      <th><a href="#">{{DatosUser1.edad}}</a></th>
+      <th><a href="#">{{DatosUser1.fechaNacimiento}}</a></th>
+      <th><a href="#">{{DatosUser1.Tipo_Sangre}}</a></th>
+      <th><a href="#">{{DatosUser1.email}}</a></th>
+
+
+    </tr>
+  {%empty%}
+    <li>No hay datos medicos registrados!</li>
+  {%endfor%}
+  </ul>
+
+
+
+</tbody>
+</table>
+</div>
+{%endblock %}

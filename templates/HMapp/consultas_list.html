@@ -1,0 +1,52 @@
+{%extends 'base.html'%}
+{%block content%}
+<!DOCTYPE html>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class="table-responsive col-md-6 col-md-offset-3">
+  <ul class="nav nav-pills">
+    <li role="presentation"><a href="/crear/visita/">Nueva Consulta</a></li>
+    <li role="presentation" class="active"><a href="/Visitas/lista">Historial de consultas</a></li>
+  </ul>
+  <form class="navbar-form navbar-right">
+              <input type="text" class="form-control" placeholder="Search..." name="q" value="{{busca|escape}}">
+            </form>
+  <h1>Historial de Consultas</h1>
+  <table class="table table-striped">
+<thead>
+  <tr>
+    <th>Pacientes</th>
+    <th>Motivo</th>
+    <th>Problema</th>
+    <th>Nota Medica</th>
+  </tr>
+</thead>
+<tbody>
+  <ul>
+    {%for Consultas in object_list%}
+
+    <tr>
+
+      <th><a href="#">{{Consultas.paciente}}</a></th>
+      <th><a href="#">{{Consultas.motivo}}</a></th>
+      <th><a href="#">{{Consultas.problema}}</a></th>
+      <th><a href="#">{{Consultas.NotaMedic}}</a></th>
+
+
+
+    </tr>
+  {%empty%}
+    <li>No hay Consultas registradas!</li>
+  {%endfor%}
+  </ul>
+
+
+
+</tbody>
+</table>
+</div>
+{%endblock %}

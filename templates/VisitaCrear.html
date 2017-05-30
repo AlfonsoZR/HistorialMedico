@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{%block content%}
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<div class="col-md-6 col-md-offset-3">
+  <ul class="nav nav-pills">
+    <li role="presentation" class="active"><a href="/crear/visita/">Nueva Consulta</a></li>
+    <li role="presentation"><a href="/Visitas/lista">Historial de consultas</a></li>
+  </ul>
+
+  <h1>Ingresa Datos Medicos de Visitas Medicas</h1>
+  <form method="post" action="">{% csrf_token %}
+    {{ crear_visita.as_p}}
+    <input type="submit"  value="Guardar"/>
+  </form>
+</div>
+
+
+
+
+{%endblock %}

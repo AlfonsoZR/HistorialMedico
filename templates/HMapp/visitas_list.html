@@ -1,0 +1,41 @@
+{%extends 'base.html'%}
+{%block content%}
+<!DOCTYPE html>
+
+<div class="table-responsive col-md-6 col-md-offset-3">
+
+  <h1>Hist de Visitas</h1>
+  <table class="table table-striped">
+<thead>
+  <tr>
+    <th>Doctor</th>
+    <th>Motivo</th>
+    <th>Problema</th>
+    <th>Nota Medica</th>
+  </tr>
+</thead>
+<tbody>
+  <ul>
+    {%for Visitas in object_list%}
+
+    <tr>
+
+      <th><a href="#">{{Visitas.doctor}}</a></th>
+      <th><a href="#">{{Visitas.motivo}}</a></th>
+      <th><a href="#">{{Visitas.problema}}</a></th>
+      <th><a href="#">{{Visitas.NotaMedic}}</a></th>
+
+
+
+    </tr>
+  {%empty%}
+    <li>No hay visitas registradas!</li>
+  {%endfor%}
+  </ul>
+
+
+
+</tbody>
+</table>
+</div>
+{%endblock %}
