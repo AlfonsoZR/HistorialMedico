@@ -30,7 +30,7 @@ url(r'^usuario', views.useropc, name='usuarioopc'),
 
     url(r'^crear/visita/', views.Crear_consulta, name='VisitasCrear'),
 
-    url(r'^home$', views.home, name='home'),
+    url(r'^$', views.home, name='home'),
 
     url(r'^inicio/$', views.inicio, name='inicio'),
 
