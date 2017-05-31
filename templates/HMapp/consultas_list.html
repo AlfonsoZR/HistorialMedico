@@ -1,11 +1,17 @@
 {%extends 'base.html'%}
 {%block content%}
 <!DOCTYPE html>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 
 <div class="table-responsive col-md-6 col-md-offset-3">
   <ul class="nav nav-pills">
     <li role="presentation" ><a href="/crear/visita/">Nueva Consulta</a></li>
-    <li role="presentation"><a href="/Visitas/lista">Historial de consultas</a></li>
+    <li role="presentation"class="active"><a href="/Visitas/lista">Historial de consultas</a></li>
   </ul>
   <form class="navbar-form navbar-right">
               <input type="text" class="form-control" placeholder="Search..." name="q" value="{{busca|escape}}">
