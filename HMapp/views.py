@@ -149,6 +149,15 @@ class PacientesUpdateView(UpdateView):
     template = "InfPersonal.html"
     success_url = "/DatosUser/lista"
 
+#vistas para eliminar
+
+# def visita_eliminar(request, id_paciente):
+#     consulta = Consultas.objects.get(id=id_paciente)
+#     if request.method == 'POST':
+#         consulta.delete()
+#         return redirect('Visitas/lista')
+#     return render(request, 'paciente_delete.html', {'consulta':consulta})
+
 # class DatosAlergias(CreateView):
 #     model = Alergias_Medicamentos
 # #   template_name = "form.html"

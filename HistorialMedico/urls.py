@@ -46,7 +46,7 @@ url(r'^usuario', views.useropc, name='usuarioopc'),
 
     url(r'^paciente_actualizar/(?P<pk>\d+)/$', PacientesUpdateView.as_view(), name='update_paciente'),
 
-
+    # url(r'^consulta_eliminar/(?P<id_paciente>\d+)/$', views.visita_eliminar, name='eliminar_consulta'),
 
 
 

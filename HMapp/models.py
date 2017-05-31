@@ -37,6 +37,7 @@ class Consultas(models.Model):
 
 
 
+
 class Alergias_Medicamentos(models.Model):
     """Anota los medicamentos que actualmente estás tomando. Escribe el nombre, el motivo por el cual lo estás tomando, y desde
 hace cuanto tiempo:"""
